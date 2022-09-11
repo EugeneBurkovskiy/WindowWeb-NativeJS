@@ -1,4 +1,13 @@
 
+function openModal(window) {
+    window.classList.remove("hide");
+    window.classList.add("show");
+}
+function closeModal(window) {
+    window.classList.remove("show");
+    window.classList.add("hide");
+}
+
 function modal(btn, selector) {
 
     const engineerBtn = document.querySelectorAll(btn),
@@ -8,28 +17,19 @@ function modal(btn, selector) {
     engineerBtn.forEach(item => (
         item.addEventListener("click", (e) => {
             e.preventDefault();
-            openModal();
+            openModal(engineerModal);
         })
     ));
 
-    function openModal() {
-        engineerModal.classList.remove("hide");
-        engineerModal.classList.add("show");
-    }
-    function closeModal() {
-        engineerModal.classList.remove("show");
-        engineerModal.classList.add("hide");
-    }
-
     modalClose.forEach(item => {
         item.addEventListener('click', () => {
-            closeModal();
+            closeModal(engineerModal);
         });
     });
 
     engineerModal.addEventListener("click", (e) => {
         if (e.target == engineerModal) {
-            closeModal();
+            closeModal(engineerModal);
         }
     });
 
@@ -37,3 +37,5 @@ function modal(btn, selector) {
 }
 
 export default modal;
+export { closeModal };
+export { openModal };
