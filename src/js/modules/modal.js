@@ -8,15 +8,22 @@ function closeModal(window) {
     window.classList.add("hide");
 }
 
-function modal(btn, selector) {
+function modal(btn, selector, closeBtn) {
 
     const engineerBtn = document.querySelectorAll(btn),
         engineerModal = document.querySelector(selector),
-        modalClose = document.querySelectorAll(".popup_close");
+        modalClose = document.querySelectorAll(closeBtn),
+        modals = document.querySelectorAll("[data-modal]");
 
     engineerBtn.forEach(item => (
         item.addEventListener("click", (e) => {
             e.preventDefault();
+
+            modals.forEach(item => {
+                openModal(item);
+                closeModal(item);
+            });
+
             openModal(engineerModal);
         })
     ));

@@ -1,6 +1,5 @@
 
-
-function forms() {
+function forms(state) {
 
     const form = document.querySelectorAll("form"),
         input = document.querySelectorAll("input"),
@@ -27,6 +26,11 @@ function forms() {
             element.classList.add('status');
             item.append(element);
             const formData = new FormData(item);
+            if (item.getAttribute('data-calc') == 'end') {
+                for (let key in state) {
+                    formData.append(key, state[key]);
+                }
+            }
             postData("assets/server.php", formData)
                 .then(result => {
                     console.log(result);
