@@ -1,11 +1,11 @@
 
 function openModal(window) {
     window.classList.remove("hide");
-    window.classList.add("show");
+    window.classList.add("show", "faded");
 }
 function closeModal(window) {
     window.classList.remove("show");
-    window.classList.add("hide");
+    window.classList.add("hide", "faded");
 }
 
 function modal(btn, selector, closeBtn) {

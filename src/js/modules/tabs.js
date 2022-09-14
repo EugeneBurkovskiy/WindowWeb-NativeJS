@@ -13,7 +13,7 @@ function tabs(tabSelector, tabContentSelector, activeClass) {
                 content.classList.add("hide");
                 content.classList.remove("show");
             });
-            tabsContent[i].classList.add("show");
+            tabsContent[i].classList.add("show", "faded");
         });
     });
 }

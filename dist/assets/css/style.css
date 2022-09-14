@@ -18,6 +18,15 @@ body {
   color: red;
 }
 
+.faded{
+  animation-name: faded;
+  animation-duration: 1.5s;
+}
+@keyframes faded{
+  from{opacity: 0.1;}
+  to{opacity: 1;}
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -1825,12 +1834,4 @@ textarea:focus {
 }
 .hide{
   display:none
-}
-.fade{
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@keyframes fade{
-  from{opacity: 0.1;}
-  to{opacity: 1;}
 }
