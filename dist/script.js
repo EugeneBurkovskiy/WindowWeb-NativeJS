@@ -17681,7 +17681,7 @@ function modal(btn, selector, closeBtn) {
     }
   });
   setTimeout(function () {
-    openModal();
+    openModal(document.querySelector(".popup_engineer"));
   }, 60000);
 }
 
