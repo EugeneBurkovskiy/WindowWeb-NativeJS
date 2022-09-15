@@ -40,7 +40,7 @@ function modal(btn, selector, closeBtn) {
         }
     });
 
-    // setTimeout(() => { openModal(); }, 60000);
+    setTimeout(() => { openModal(); }, 60000);
 }
 
 export default modal;

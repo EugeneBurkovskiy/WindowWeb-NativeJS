@@ -17679,7 +17679,10 @@ function modal(btn, selector, closeBtn) {
     if (e.target == engineerModal) {
       closeModal(engineerModal);
     }
-  }); // setTimeout(() => { openModal(); }, 60000);
+  });
+  setTimeout(function () {
+    openModal();
+  }, 60000);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (modal);
