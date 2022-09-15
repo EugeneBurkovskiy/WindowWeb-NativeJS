@@ -30,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
     timer('2022-12-1');
     gallery();
     forms(modalState);
+
 });
